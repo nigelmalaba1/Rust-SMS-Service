@@ -1,0 +1,8 @@
+[package]
+name = "smsservice"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+reqwest = "0.11"
+tokio = { version = "1.14", features = ["full"] }
