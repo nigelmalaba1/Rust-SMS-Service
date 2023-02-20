@@ -8,11 +8,12 @@ async fn main() -> Result<(), reqwest::Error> {
     body.insert("Body", "Hello from Twilio");
     body.insert("From", "+18559612819");
     body.insert("To", "+19197237407");
+    body.insert("MediaUrl", "https://i.ibb.co/vwR14XL/passkey.png");
 
     let client = reqwest::Client::new();
     let response = client
         .post(url)
-        .basic_auth("AC9c8f99d060f2bae017f5c900274e39af", Some("a101663ca49d3a19ce2f23f7d122b02c"))
+        .basic_auth("AC9c8f99d060f2bae017f5c900274e39af", Some("52ee40e80b96982b0756063733f901fb"))
         .form(&body)
         .send()
         .await?;
